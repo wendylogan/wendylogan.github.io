@@ -100,9 +100,7 @@
     <!-- Projects Loaded from GitHub -->
     <h2>My Projects</h2>
     <div class="projects" id="projects"></div>
-
     <script>
-        // Fetch your public GitHub repos
         fetch('https://api.github.com/users/wendylogan/repos')
             .then(response => response.json())
             .then(repos => {
@@ -110,10 +108,12 @@
                 repos.forEach(repo => {
                     const card = document.createElement('div');
                     card.className = 'project-card';
+                    card.style.cursor = 'pointer';
+                    card.onclick = () => window.open(repo.html_url, '_blank');
                     card.innerHTML = `
-                        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                        <h3>${repo.name}</h3>
                         <p>${repo.description || 'No description'}</p>
-                        `;
+                    `;
                     container.appendChild(card);
                 });
             })
