@@ -141,6 +141,109 @@ a {
 }
 
 /* ============================================
+   HAMBURGER MENU
+   ============================================ */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: .75rem .75rem;
+  z-index: 20;
+  border: 2px solid var(--color-border-divider);
+  border-radius: 8px;
+ color: var(--color-text-muted);
+ margin-right: .5rem;
+}
+
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text-muted);
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile Menu - Dropdown style */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-canvas);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 15;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.mobile-nav-button {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: monospace;
+  padding: 0.6rem 1rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-button:hover,
+.mobile-nav-button:active {
+  color: var(--color-accent);
+  background-color: rgba(108, 191, 138, 0.08);
+}
+
+/* Close button */
+.mobile-close {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: monospace;
+  padding: 0.5rem;
+  align-self: flex-end;
+  transition: color 0.2s ease;
+}
+
+.mobile-close:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================
    HERO SECTION
    ============================================ */
 
@@ -265,7 +368,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: .25rem;
 }
 
 .skill-filter-button {
@@ -381,8 +483,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: .5rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border-divider);
 }
 
@@ -443,6 +545,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -819,6 +922,7 @@ a {
 @media (max-width: 768px) {
   .hero-section {
     padding: 4rem 1rem;
+    min-height: 50vh;
   }
   
   .section {
@@ -846,7 +950,7 @@ a {
 
 @media (max-width: 480px) {
   .header {
-    padding: 0.25rem 0.25rem;
+    padding: 0.1rem 0.1rem;
   }
   
   .header-inner {
@@ -854,46 +958,50 @@ a {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 0.7rem;
+    gap: 0.2rem;
   }
   
   .logo {
-    font-size: 1rem;
-    flex-shrink: 0;
-    white-space: nowrap;
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
   }
   
+  /* Hide desktop nav, show hamburger */
   .nav {
+    display: none;
+  }
+  
+  .hamburger {
     display: flex;
-    gap: 0.4rem;
-    flex-shrink: 0;
-    flex-wrap: nowrap;
   }
-  
-  .nav-button {
-    font-size: 0.5rem;
-    padding: 0.1rem 0.15rem;
-    white-space: nowrap;
+
+  .hero {
+    margin-top: 0;
+    padding: 2rem 0rem
   }
-  
-  .hero-section {
-    padding: 3rem 1rem;
+
+  .hero-section{
+    padding: 2rem .5rem;
+    margin-top: 0;
+    min-height: 40vh;
   }
   
   .hero-title {
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    font-size: 1.75rem;
   }
   
   .hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    width: 100%;
   }
   
   .hero-badge {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
   
   .section {
-    padding: 2rem 1rem;
+    padding: 2rem .5rem;
+    min-height: auto;
   }
   
   .section-label {
@@ -902,14 +1010,18 @@ a {
   
   .section-title {
     font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
   
   .section-description {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    padding: 0%;
+    margin-bottom: .5rem;
   }
   
   .about-grid {
     gap: 0.15rem 0;
+    margin-top: 1rem;
   }
   
   .about-label {
@@ -921,12 +1033,32 @@ a {
   }
   
   .skill-filter-button {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
   }
-  
+
+  .skills-filter {
+    margin-bottom: 1rem;
+  }
+
+  .skills-grid {
+    margin-top: 1.5rem;
+  }
+
+  .skill-tag {
+    font-size: .7rem;
+  }
+
+  .skill-toggle {
+    font-size: .75rem;
+  }
+
+  .skill-count {
+    font-size: .7rem;
+  }
+
   .project-filter-button {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 0.2rem 0.5rem;
   }
   
@@ -945,24 +1077,82 @@ a {
   .project-github-link {
     font-size: 0.6rem;
   }
+
+  .project-toggle {
+    font-size: .75rem;
+  }
+
+  .project-count {
+    font-size: .7rem;
+  }
+
+  .project-detail-back-link {
+    font-size: .75rem;
+    margin-right: .5rem;
+  }
+
+  .project-detail-label {
+    font-size: .8rem;
+  }
+
+  .project-detail-main {
+    padding: 2rem 0rem;
+  }
+
+  .project-detail-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-detail-description {
+    font-size: .8rem;
+    margin-bottom: 0rem;
+  }
+
+  .project-detail-tag {
+    font-size: .7rem;
+  }
+
+  .project-detail-tags {
+    margin: 1.25rem 0rem;
+  }
+
+  .project-detail-screenshot {
+    margin: 1rem 0rem;
+  }
+
+  .project-tag {
+    font-size: .7rem;
+  }
   
   .contact-section {
     padding: 2rem 1rem 3rem;
+    min-height: auto;
   }
   
   .contact-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   
   .contact-note {
     font-size: 0.75rem;
+    min-height: auto;    
   }
   
   .footer {
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
+    position: relative;
+    z-index: 20;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+    clear: none;
+    margin-top: auto;
+    min-height: 29vh;
+    flex-shrink: 0;
   }
   
   .footer-inner {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -978,5 +1168,10 @@ a {
   
   .footer-built-with {
     font-size: 0.65rem;
+  }
+  .app-container {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
 }

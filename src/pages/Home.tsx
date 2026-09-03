@@ -19,6 +19,20 @@ export default function Home() {
   const [initialProjectsToShow, setInitialProjectsToShow] = useState(4);
   const INITIAL_SKILLS = 10;
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  console.log("Home component is rendering with menuOpen:", menuOpen);
+
+// Close menu when clicking outside or resizing to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 480) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
   // Detect screen size and set initial project count
   useEffect(() => {
@@ -29,7 +43,7 @@ export default function Home() {
       } else if (width < 1024) {
         setInitialProjectsToShow(2); // Tablet: limit to 2 project cards initially
       } else {
-        setInitialProjectsToShow(3); // Desktop: limit to 3 projects initially
+        setInitialProjectsToShow(3); // Full-size Desktop: limit to 3 projects initially
       }
     };
     
@@ -59,6 +73,7 @@ export default function Home() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false);
     }
   };
 
@@ -170,6 +185,18 @@ export default function Home() {
       <header className="header">
         <div className="header-inner">
           <Link to="/" className="logo">WL</Link>
+          {/* Hamburger button - visible on mobile */}
+          <button 
+            className={`hamburger ${menuOpen ? 'active' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+          
+          {/* Desktop nav */}
           <nav className="nav">
             <button 
               onClick={() => scrollToSection('about')}
@@ -192,6 +219,35 @@ export default function Home() {
             <button 
               onClick={() => scrollToSection('contact')}
               className="nav-button"
+            >
+              contact
+            </button>
+          </nav>
+        </div>
+                {/* Mobile menu overlay */}
+        <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+          <nav className="mobile-nav">
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="mobile-nav-button"
+            >
+              about
+            </button>
+            <button 
+              onClick={() => scrollToSection('skills')}
+              className="mobile-nav-button"
+            >
+              skills
+            </button>
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className="mobile-nav-button"
+            >
+              projects
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="mobile-nav-button"
             >
               contact
             </button>
