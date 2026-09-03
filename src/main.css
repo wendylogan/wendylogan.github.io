@@ -1009,8 +1009,8 @@ a {
   }
   
   .section-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
   }
   
   .section-description {
@@ -1126,7 +1126,7 @@ a {
   }
   
   .contact-section {
-    padding: 2rem 1rem 3rem;
+    padding: 2rem 1rem;
     min-height: auto;
   }
   
