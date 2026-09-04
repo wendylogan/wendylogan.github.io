@@ -402,8 +402,10 @@ export default function Home() {
       </div>
 
         <div className="projects-grid">
-          {visibleProjectsList.map((project) => (
-            <Link
+          {visibleProjectsList.map((project) => {
+            console.log("Project ID being used:", project.id);
+            return (
+              <Link
               key={project.id}
               to={`/projects/${project.id}`}
               state={{ fromProject: true }}
@@ -435,7 +437,7 @@ export default function Home() {
               </div>
               <span className="project-details-link">view details →</span>
             </Link>
-          ))}
+          )})}
         </div>
 
         <div>

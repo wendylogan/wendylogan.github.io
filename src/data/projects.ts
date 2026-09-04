@@ -1,10 +1,17 @@
 export const PROJECTS = [
   {
-    id: "1",
+    id: "Studio-Ghibli-API",
     title: "Studio Ghibli API App",
     description: "Java application that connects to the Studio Ghibli API, retrieves film data, parses JSON with Gson, and allows users to search for films by title.",
     langs: ["Java", "REST API", "Gson", "JSON"],
     githubUrl: "https://github.com/wendylogan/Studio-Ghibli-API/blob/main/README.md",
+    demoImage: "/SG-API/SG-API-1-catalog.png",
+    images: [
+      "/SG-API/SG-API-1-catalog.png",
+      "/SG-API/SG-API-2-search.png",
+      "/SG-API/SG-API-3-error.png"
+    ],
+    priority: 1
   },
   {
     id: "2",
