@@ -20,7 +20,6 @@ export default function Home() {
   const INITIAL_SKILLS = 10;
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log("Home component is rendering with menuOpen:", menuOpen);
 
 // Close menu when clicking outside or resizing to desktop
   useEffect(() => {
@@ -403,7 +402,6 @@ export default function Home() {
 
         <div className="projects-grid">
           {visibleProjectsList.map((project) => {
-            console.log("Project ID being used:", project.id);
             return (
               <Link
               key={project.id}
