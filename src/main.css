@@ -369,6 +369,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .skill-filter-button {
@@ -423,10 +424,9 @@ a {
 .skill-divider {
   border: none;
   border-top: 1px solid var(--color-text-dimmer);
-  margin-bottom: 2rem;
   opacity: 0.3;
   width: 80%;
-  margin: auto;
+  margin: .5rem auto 1rem;
 }
 
 .skills-grid {
