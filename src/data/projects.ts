@@ -1,6 +1,6 @@
 export const PROJECTS = [
   {
-    id: "Studio-Ghibli-API",
+    id: "studio-ghibli-api",
     title: "Studio Ghibli API App",
     description: "Java application that connects to the Studio Ghibli API, retrieves film data, parses JSON with Gson, and allows users to search for films by title.",
     langs: ["Java", "REST API", "Gson", "JSON"],
@@ -14,7 +14,7 @@ export const PROJECTS = [
     priority: 1
   },
   {
-    id: "Poke-API-Explorer",
+    id: "poke-api-explorer",
     title: "Pokémon API Explorer",
     description: "Clean frontend API integration with dynamic DOM manipulation. Users select a Pokémon from a dropdown and view its sprite, name, height, and weight.",
     langs: ["JavaScript", "HTML", "CSS", "REST API"],
