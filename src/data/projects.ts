@@ -14,7 +14,7 @@ export const PROJECTS = [
     priority: 1
   },
   {
-    id: "2",
+    id: "Poke-API-Explorer",
     title: "Pokémon API Explorer",
     description: "Clean frontend API integration with dynamic DOM manipulation. Users select a Pokémon from a dropdown and view its sprite, name, height, and weight.",
     langs: ["JavaScript", "HTML", "CSS", "REST API"],

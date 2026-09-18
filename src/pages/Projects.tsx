@@ -250,7 +250,6 @@ export default function Projects() {
           </button>
         )}
 
-        {/* Optional: Show count indicator */}
         <div style={{ 
           marginTop: '0.5rem',
           fontSize: '0.7rem',
