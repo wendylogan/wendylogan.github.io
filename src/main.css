@@ -89,6 +89,8 @@ a {
   background-color: var(--color-canvas);
   color: var(--color-text);
   font-family: monospace;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ============================================
@@ -756,6 +758,7 @@ a {
   max-width: 90%;
   margin: 0 auto;
   padding: 4rem 1.5rem;
+  flex: 1;
 }
 
 .project-detail-label {
@@ -785,7 +788,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .project-detail-tag {
@@ -804,6 +807,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .project-detail-screenshot img {
@@ -860,7 +865,6 @@ a {
 .project-detail-github-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   font-family: monospace;
   font-size: 0.875rem;
   font-weight: 700;
@@ -1029,6 +1033,7 @@ a {
   border-top: 1px solid var(--color-border);
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  width: 100%;
 }
 
 .footer-inner {
@@ -1325,7 +1330,7 @@ a {
   }
   
   .app-container {
-    min-height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
