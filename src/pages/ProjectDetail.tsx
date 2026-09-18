@@ -70,7 +70,7 @@ export default function ProjectDetail() {
 
     // Captions for screenshots (customize per project)
   const screenshotCaptions: Record<string, string[]> = {
-    "Studio-Ghibli-API": [
+    "studio-ghibli-api": [
       "The program displays a neatly separated list of Studio Ghibli film titles and their descriptions from the Ghibli API.",
       "Users can search for a title from the list to see the description and more info such as the release date and producer, or enter 'quit' to exit the program.",
       "The program handles 'movie not found' with a clear error message."

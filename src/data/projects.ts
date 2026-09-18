@@ -5,11 +5,11 @@ export const PROJECTS = [
     description: "Java application that connects to the Studio Ghibli API, retrieves film data, parses JSON with Gson, and allows users to search for films by title.",
     langs: ["Java", "REST API", "Gson", "JSON"],
     githubUrl: "https://github.com/wendylogan/Studio-Ghibli-API/blob/main/README.md",
-    demoImage: "/SG-API/SG-API-1-catalog.png",
+    demoImage: "/sg-api/sg-api-1-catalog.png",
     images: [
-      "/SG-API/SG-API-1-catalog.png",
-      "/SG-API/SG-API-2-search.png",
-      "/SG-API/SG-API-3-error.png"
+      "/sg-api/sg-api-1-catalog.png",
+      "/sg-api/sg-api-2-search.png",
+      "/sg-api/sg-api-3-error.png"
     ],
     priority: 1
   },
