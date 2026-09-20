@@ -125,16 +125,21 @@ export default function ProjectDetail() {
         </div>
 
         <div className="project-detail-actions">
-          <a
-            href={project.githubUrl || "https://github.com/wendylogan"}
-            target="_blank"
-            rel="noreferrer"
-            className="project-detail-github-btn"
-          >
-            view on GitHub →
-          </a>
+          {project.githubUrl ? (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="project-detail-github-btn"
+            >
+              view on GitHub →
+            </a>
+          ) : (
+            <span className="project-detail-github-coming-soon">
+              GitHub — coming soon
+            </span>
+          )}
         </div>
-
 
         {/* Screenshots with captions */}
         {project.images && project.images.length > 0 ? (

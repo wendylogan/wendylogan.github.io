@@ -616,6 +616,14 @@ a {
   font-weight: bold;
 }
 
+.project-github-coming-soon {
+  color: var(--color-text-dimmer);
+  font-size: 0.75rem;
+  font-style: italic;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
 .project-description {
   color: var(--color-text-muted);
   font-size: 0.85rem;
@@ -878,6 +886,18 @@ a {
 
 .project-detail-github-btn:hover {
   background-color: #5aab7a;
+}
+
+.project-detail-github-coming-soon {
+  display: inline-flex;
+  align-items: center;
+  font-family: monospace;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--color-text-dimmer);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.375rem;
 }
 
 /* Back to projects link - green underline on hover + bold */

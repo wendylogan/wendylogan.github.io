@@ -411,15 +411,19 @@ export default function Home() {
             >
               <div className="project-header">
                 <h3 className="project-title">{project.title}</h3>
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.open(project.githubUrl || "https://github.com/wendylogan", "_blank");
-                  }}
-                  className="project-github-link"
-                >
-                  GitHub ↗
-                </button>
+                {project.githubUrl ? (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(project.githubUrl, "_blank");
+                    }}
+                    className="project-github-link"
+                  >
+                    GitHub ↗
+                  </button>
+                ) : (
+                  <span className="project-github-coming-soon">Coming soon</span>
+                )}
               </div>
               <p className="project-description">{project.description}</p>
               <div className="project-tags">
