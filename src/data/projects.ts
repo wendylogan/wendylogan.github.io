@@ -5,7 +5,6 @@ export const PROJECTS = [
     description: "Java application that connects to the Studio Ghibli API, retrieves film data, parses JSON with Gson, and allows users to search for films by title.",
     langs: ["Java", "REST API", "Gson", "JSON"],
     githubUrl: "https://github.com/wendylogan/Studio-Ghibli-API/blob/main/README.md",
-    demoImage: "/sg-api/sg-api-1-catalog.png",
     images: [
       "/sg-api/sg-api-1-catalog.png",
       "/sg-api/sg-api-2-search.png",
@@ -19,7 +18,6 @@ export const PROJECTS = [
     description: "Clean frontend API integration with dynamic DOM manipulation. Users select a Pokémon from a dropdown and view its sprite, name, height, and weight.",
     langs: ["JavaScript", "HTML", "CSS", "REST API"],
     githubUrl: "https://github.com/wendylogan/Poke-API/blob/main/README.md",
-    demoImage: "/poke-api/poke-api-3-results.png",
     images: [
       "/poke-api/poke-api-1-start.png",
       "/poke-api/poke-api-2-selection.png",
@@ -33,11 +31,11 @@ export const PROJECTS = [
     langs: ["JavaScript", "HTML", "CSS"],
   },
   {
-    id: "lottery-mvc",
+    id: "lmvc",
     title: "Lottery MVC Application",
     description: "Clean Model-View-Controller architecture with Swing GUI. Users enter numbers, application simulates lottery drawings and tracks match statistics.",
     langs: ["Java"],
-    githubUrl: "https://github.com/wendylogan/lottery-mvc",
+    githubUrl: "https://github.com/wendylogan/lmvc",    
   },
   {
     id: "server-client",
