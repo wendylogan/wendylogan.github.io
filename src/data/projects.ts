@@ -37,9 +37,11 @@ export const PROJECTS = [
     langs: ["Java"],
     githubUrl: "https://github.com/wendylogan/lmvc", 
     images: [
-      "/lmvc/lmvc-1-start.png",
-      "/lmvc/lmvc-2-selection.png",
-      "/lmvc/lmvc-3-results.png"
+      "/lmvc/lmvc-1-success.png",
+      "/lmvc/lmvc-2-numbers-invalid.png",
+      "/lmvc/lmvc-3-numDraws-invalid.png",
+      "/lmvc/lmvc-4-both-invalid.png",
+      "/lmvc/lmvc-5-blank-invalid.png"
     ]
   },
   {
@@ -62,5 +64,13 @@ export const PROJECTS = [
     description: "Integrates two external APIs with polished UI. Users select Disney character, choose joke type, and optionally request a joke.",
     langs: ["JavaScript", "HTML", "CSS", "REST API"],
     githubUrl: "https://github.com/wendylogan/Two-APIs/blob/main/README.md",
+    images: [
+      "/two-apis/two-apis-1-loading.png",
+      "/two-apis/two-apis-2-character-list-invalid.png",
+      "/two-apis/two-apis-3-search-function.png",
+      "/two-apis/two-apis-4-single.png",
+      "/two-apis/two-apis-5-double.png",
+      "/two-apis/two-apis-6-unchecked.png"
+    ]
   }
 ];
