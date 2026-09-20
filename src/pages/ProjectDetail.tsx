@@ -75,7 +75,7 @@ export default function ProjectDetail() {
       "Users can search for a title from the list to see the description and more info such as the release date and producer, or enter 'quit' to exit the program.",
       "The program handles 'movie not found' with a clear error message."
     ],
-    "poke-api": [
+    "poke-api-explorer": [
       "The application loads with a clean interface and a dropdown menu ready for selection.",
       "All 151 original Pokémon are available in the dropdown menu.",
       "After selecting a Pokémon, the sprite, height, weight, type, base XP, and abilities are displayed."
