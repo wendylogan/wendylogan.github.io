@@ -209,7 +209,7 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Show More / Show Less - Exactly like Skills section */}
+        {/* Show More / Show Less */}
         {hasMoreProjects && (
           <button
             onClick={() => setVisibleProjects(prev => Math.min(prev + 4, PROJECTS.length))}

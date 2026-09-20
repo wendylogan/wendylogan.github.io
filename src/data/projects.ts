@@ -19,6 +19,12 @@ export const PROJECTS = [
     description: "Clean frontend API integration with dynamic DOM manipulation. Users select a Pokémon from a dropdown and view its sprite, name, height, and weight.",
     langs: ["JavaScript", "HTML", "CSS", "REST API"],
     githubUrl: "https://github.com/wendylogan/Poke-API/blob/main/README.md",
+    demoImage: "/poke-api/poke-api-3-results.png",
+    images: [
+      "/poke-api/poke-api-1-start.png",
+      "/poke-api/poke-api-2-selection.png",
+      "/poke-api/poke-api-3-results.png"
+    ]
   },
   {
     id: "3",
