@@ -35,7 +35,12 @@ export const PROJECTS = [
     title: "Lottery MVC Application",
     description: "Clean Model-View-Controller architecture with Swing GUI. Users enter numbers, application simulates lottery drawings and tracks match statistics.",
     langs: ["Java"],
-    githubUrl: "https://github.com/wendylogan/lmvc",    
+    githubUrl: "https://github.com/wendylogan/lmvc", 
+    images: [
+      "/lmvc/lmvc-1-start.png",
+      "/lmvc/lmvc-2-selection.png",
+      "/lmvc/lmvc-3-results.png"
+    ]
   },
   {
     id: "server-client",
